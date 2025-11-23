@@ -1,0 +1,84 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "VectorAI Reportes",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://vectorai-kcfn.onrender.com/api/v1"
+    }
+  ],
+  "paths": {
+    "/reports/late": {
+      "get": {
+        "summary": "Reporte de personas que llegaron tarde",
+        "parameters": [
+          {
+            "name": "day",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "cutoff",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "09:00"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de personas que llegaron tarde"
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/reports/daily": {
+      "get": {
+        "summary": "Resumen diario de asistencia",
+        "parameters": [
+          {
+            "name": "day",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resumen del día"
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Internal-Secret"
+      }
+    }
+  }
+}
