@@ -29,7 +29,10 @@ Vector Attendance AI is a fully modular attendance system powered by:
 - 🧬 **Face vector embeddings (128–512d)**
 - 🎥 **Image processing endpoints**
 - 📊 **Modern React Dashboard**
-- 🤖 Optional automation via **IBM watsonx Orchestrate**
+- 🤖  Automation via **IBM watsonx Orchestrate** try it in the page: **https://attendance-ai-kappa.vercel.app**[https://attendance-ai-kappa.vercel.app/](https://attendance-ai-kappa.vercel.app/)  on the chat    
+you can try: "gimme the report of the persons who arrived late"
+<img width="346" height="501" alt="image" src="https://github.com/user-attachments/assets/10549041-877c-4b06-b004-25475151b58d" />
+
 
 All API routes use the prefix:
 
